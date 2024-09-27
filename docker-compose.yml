@@ -12,6 +12,7 @@ services:
       - POSTGRES_PASSWORD=postgres
     expose:
       - 5432
+
     restart: always
 
 
@@ -28,8 +29,8 @@ services:
       - 8000:8000
     environment:
       - DEBUG=True
-    # env_file:
-    #   - ./envs/dev/django/.env
+    env_file:
+      - ./envs/dev/django/.env
     restart: always
     depends_on:
       - db

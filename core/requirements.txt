@@ -3,4 +3,6 @@ Django==4.2.6
 psycopg==3.2.2
 psycopg-binary==3.2.2
 sqlparse==0.5.1
+python-decouple
 typing_extensions==4.12.2
+django-debug-toolbar
