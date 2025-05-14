@@ -20,7 +20,8 @@ from django.conf import settings
 from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',include('website.urls'))
+    path('',include('website.urls')),
+    path('accounts/', include('accounts.urls')),
 ]
 
 
@@ -33,5 +34,4 @@ if settings.DEBUG:
 
 if settings.SHOW_DEBUGGER_TOOLBAR:
     urlpatterns += [path('__debug__/', include('debug_toolbar.urls')),]
-if settings.SHOW_DEBUGGER_TOOLBAR:
-    urlpatterns += [path('__debug__/', include('debug_toolbar.urls')),]
+
