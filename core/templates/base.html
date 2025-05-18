@@ -61,7 +61,7 @@
               <a class="nav-link  {% if request.resolver_match.view_name  == 'website:index' %} active {% endif %}" href="{% url 'website:index' %}">صفحه اصلی</a>
             </li>
 
-            <!-- Dropdown -->
+            {% comment %} <!-- Dropdown -->
             <li class="hs-has-sub-menu nav-item">
               <a id="listingsDropdown" class="hs-mega-menu-invoker nav-link dropdown-toggle " href="#" role="button"
                 data-bs-toggle="dropdown" aria-expanded="false">لیست محصولات</a>
@@ -74,9 +74,18 @@
 
             <li class="nav-item">
               <a class="nav-link " href="/product-overview.html">بررسی اجمالی محصولات</a>
+            </li> {% endcomment %}
+            <li class="nav-item">
+              <a class="nav-link " href="{% url 'shop:product-grid' %}">  لیست محصولات </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="{% url 'website:about' %}">  درباره ما </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="{% url 'website:contact' %}">  تماس با ما </a>
             </li>
 
-            <!-- Pages -->
+            {% comment %} <!-- Pages -->
             <li class="hs-has-mega-menu nav-item" data-hs-mega-menu-item-options='{
                   "desktop": {
                     "position": "right",
@@ -129,7 +138,7 @@
               </div>
               <!-- End Mega Menu -->
             </li>
-            <!-- End Pages -->
+            <!-- End Pages --> {% endcomment %}
 
             <li class="nav-item">
               <!-- Search -->
