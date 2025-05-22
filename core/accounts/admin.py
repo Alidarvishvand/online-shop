@@ -84,3 +84,4 @@ class SessionAdmin(admin.ModelAdmin):
     list_display = ['session_key', '_session_data', 'expire_date']
     readonly_fields = ['_session_data']
 admin.site.register(Session, SessionAdmin)
+
